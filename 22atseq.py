@@ -25,7 +25,7 @@ fracgc = at/len(dna)
 print('%.2f' % fracgc)
 print(dna)
 
-
+#worked with Joshua and Yaniel
 #need variable for DNA
 # every time the loop occurs need to add an AT or GC.
 

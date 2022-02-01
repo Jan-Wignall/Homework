@@ -10,8 +10,18 @@
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
-for i in range(len(seq) -w +1):
-	window = seq[i:i +w]
+gc = 0
+for nt in seq[:w]:
+	if nt == 'C' or nt =='G': gc += 1
+print(gc)
+for i in range(len(seq) -w):
+	off = seq[i]
+	on = seq[i+w]
+	if off == 'C' or off == 'G': gc -= 1
+	if on == 'C' or on == 'G': gc += 1
+	print(i+1, seq[i+1:i+1+w], f'{gc/w:.4f}')
+	
+#Help from Yaniel and the class in general
 """
 python3 27gcwin.py
 0 ACGACGCAGGA 0.6364

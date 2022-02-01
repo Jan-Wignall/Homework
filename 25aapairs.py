@@ -17,7 +17,6 @@ for i in range(19):
 		
 com = (1+19)*19/2
 print(f'{com:.0f}')
-
 """
 python3 25aapairs.py
 A C

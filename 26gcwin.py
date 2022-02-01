@@ -18,8 +18,7 @@ for i in range(len(seq) -w +1):
 	print(i, window, f'{gc/w:.4f}')
 	gc = 0		
 		
-
-
+#worked with Yaniel and Joshua and Ziang
 
 
 
