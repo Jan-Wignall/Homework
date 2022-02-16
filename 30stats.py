@@ -61,7 +61,7 @@ for dev in num:
 		median = int((medA + medB)//2)
 	else:
 		median = int(num[n//2])
-print('count:' numcount, 'Minimum:' minval, 'Maximum:' maxval, 'Mean:' mean, 'Std. Dev:' stdev, 'Median:' median)
+print('count:', numcount, 'Minimum:', minval, 'Maximum:', maxval, 'Mean:', mean, 'Std. Dev:', stdev, 'Median:', median)
 #Collab with Josh
 """
 python3 30stats.py 3 1 4 1 5
