@@ -9,9 +9,8 @@ import math
 
 
 num = []
-for number in sys.argv[1:]:
-	float(number)
-	num.append(number)
+for txt in sys.argv[1:]:
+	num.append(float(txt))
 	
 #for i in range (1, len(sys.argv)):
 #	probs.append(float(sys.argv[i]))
@@ -41,14 +40,14 @@ for voorwerp in num:
 n = len(num)
 totsum=0
 for i in num:
-	x = int(i)
+	x = i
 	totsum += x
 mean = totsum / numcount
 
 #Std. Dev
 othersum = 0
 for i in num:
-	othersum += (int(i)-mean)**2
+	othersum += (i-mean)**2
 stdev = math.sqrt(othersum/(n-1))
 
 
@@ -56,12 +55,12 @@ stdev = math.sqrt(othersum/(n-1))
 num.sort()
 for dev in num: 
 	if n % 2 == 0:
-		medA= int(num[n//2])
-		medB= int(num[n//2-1])
-		median = int((medA + medB)//2)
+		medA= (num[n//2])
+		medB= (num[n//2-1])
+		median = ((medA + medB)//2)
 	else:
-		median = int(num[n//2])
-print('count:', numcount, 'Minimum:', minval, 'Maximum:', maxval, 'Mean:', mean, 'Std. Dev:', stdev, 'Median:', median)
+		median = (num[n//2])
+print('count:', numcount , 'Minimum:', minval , 'Maximum:', maxval , 'Mean:', mean , 'Std. Dev:', stdev , 'Median:', median )
 #Collab with Josh
 """
 python3 30stats.py 3 1 4 1 5
