@@ -36,20 +36,20 @@ masking= args.masking
 new_sequence= ''
 
 for i in range(0, len(sequence),window):
-	entropy = mcb.entropy_calc(seq[i:i+window], window)
+	entropy = mcb.entropy_calc(seq[i:i+window], window) #refers to entropy calculation in mcb185
 	if entropy >= entropythreshold:
-		new_sequence += sequence[i:i+window].upper()
+		new_sequence += sequence[i:i+window].upper() #if entropy is higher, then keep upper case
 	else:
-		if masking.upper() == 'N':
+		if masking.upper() == 'N':  #makes N
 				new_sequence += 'N'*window
 		else:
-				new_sequence += sequence[i:i+window].lower()	
+				new_sequence += sequence[i:i+window].lower() #makes lower case
 
-with open('newfasta.fa', 'w') as fp:
+with open('newfasta.fa', 'w') as fp: #module to write new fasta file
 	fp.write(name)
 	fp.write('\n')
-	for i in range(0,len(new_sequence), 50):
-		fp.write(new_sequence[i:i+50])
+	for i in range(0,len(new_sequence), 100):
+		fp.write(new_sequence[i:i+100])
 		fp.write('\n')				
-#collaboration with Josh
+#collaboration with Joshua Blas
 	
