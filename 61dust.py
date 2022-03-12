@@ -36,7 +36,7 @@ masking= args.masking
 new_sequence= ''
 
 for i in range(0, len(sequence),window):
-	entropy = mcb.entropy_calc(seq[i:i+window], window) #refers to entropy calculation in mcb185
+	entropy = mcb.entropy_calc(sequence[i:i+window], window) #refers to entropy calculation in mcb185
 	if entropy >= entropythreshold:
 		new_sequence += sequence[i:i+window].upper() #if entropy is higher, then keep upper case
 	else:
